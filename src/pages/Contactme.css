@@ -1,0 +1,18 @@
+
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 10;
+      transform: translateY(0);
+    }
+  }
+
+  .contact-form {
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+  }
+  
+  .contact-form.visible {
+    transform: translateY(0);
+  }
+  

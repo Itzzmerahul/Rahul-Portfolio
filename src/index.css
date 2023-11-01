@@ -1,6 +1,15 @@
+nav {
+  box-sizing: border-box;
+}
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 
 .cursor::after {
     display: block;
@@ -24,3 +33,16 @@
       opacity: 0;
     }
   }
+
+  #portfolio, #contactMe {
+    opacity: 1;
+    transition: opacity 0.5s; /* Increase transition duration for a smoother effect */
+  }
+  
+  .visible {
+    opacity: 0;
+  }
+  
+  
+  
+  

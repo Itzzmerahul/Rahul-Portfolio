@@ -25,14 +25,17 @@ export default function Home() {
   
 
   return (
-    <div className="w-full h-full bg-white flex items-center justify-between flex-col">
+    <div className="w-full h-full font-roboto bg-white flex items-center justify-between flex-col">
       <NavBar show={showNavbar} />
+
       <MainContent />
-      <div className='lg:m-12 m-7'> 
+      <div className=''> 
         <Portfolio />
+        
       </div>
       <div id="contactme" className="bg-white">
   <ContactMe />
+  
 </div>
     </div>
   );

@@ -13,7 +13,7 @@ export default function NavBar({ show }) {
 
   return (
     <nav
-      className={`fixed w-full -my-2  bg-black  transition-transform ${
+      className={`fixed w-full -my-2  bg-black z-10 transition-transform ${
         show ? 'translate-y-0' : '-translate-y-16'
       }`}
     >
@@ -27,7 +27,7 @@ export default function NavBar({ show }) {
               onClick={() => handleScrollTo('mainContent')}
             >
               <h2 className="text-2xl font-bold text-white cursor-pointer">
-                Rahul Krishna
+                Hey There!
               </h2>
             </Link>
             <div className="md:hidden">
