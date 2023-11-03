@@ -13,7 +13,7 @@ export default function NavBar({ show }) {
 
   return (
     <nav
-      className={`fixed w-full -my-2  bg-black z-10 transition-transform ${
+      className={`fixed w-full -my-4 lg:-my-3  bg-black z-10 transition-transform ${
         show ? 'translate-y-0' : '-translate-y-16'
       }`}
     >

@@ -14,7 +14,7 @@ export default function Maincontent() {
   };
 
   return (
-    <div id="mainContent" className="w-full font-roboto lg:flex-row flex-col flex items-center justify-center bg-white main-content" style={{ marginBottom: '120px'}}>
+    <div id="mainContent" className="w-full -mt-3 font-roboto lg:flex-row flex-col flex items-center justify-center bg-white main-content" >
       <div className="flex items-center justify-center main-content">
         <img src={empty} alt="" className="bg-cover h-full w-full" />
         <div className="absolute inset-0 flex flex-col text-left px-16 items-start lg:px-28 justify-start mt-20">
