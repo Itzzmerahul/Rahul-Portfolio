@@ -7,7 +7,7 @@ import py1 from './images/py1.png';
 import ht1 from './images/ht1.png';
 import css from './images/css.avif';
 import js from './images/js.avif';
-import fi from './images/fi.webp';
+import fi from './images/fi.webp';                  
 import da1 from './images/da1.jpg';
 
 const skills = [
