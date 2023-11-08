@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Rahul-portfolio/static/css/main.d10e35d6.css",
-    "main.js": "/Rahul-portfolio/static/js/main.406f2f54.js",
+    "main.css": "/Rahul-portfolio/static/css/main.02750bb0.css",
+    "main.js": "/Rahul-portfolio/static/js/main.ce055535.js",
     "static/media/itzme10.jpg": "/Rahul-portfolio/static/media/itzme10.bbd9b14ab5da9b888e0f.jpg",
     "static/media/ht1.png": "/Rahul-portfolio/static/media/ht1.4063c1421a2806acf35c.png",
     "static/media/itzme8.jpg": "/Rahul-portfolio/static/media/itzme8.1ea5be09633223b3a4b7.jpg",
@@ -14,11 +14,11 @@
     "static/media/css.avif": "/Rahul-portfolio/static/media/css.e9a85d44163232612852.avif",
     "static/media/js.avif": "/Rahul-portfolio/static/media/js.ac2b5bd01e8d3e1e22d4.avif",
     "index.html": "/Rahul-portfolio/index.html",
-    "main.d10e35d6.css.map": "/Rahul-portfolio/static/css/main.d10e35d6.css.map",
-    "main.406f2f54.js.map": "/Rahul-portfolio/static/js/main.406f2f54.js.map"
+    "main.02750bb0.css.map": "/Rahul-portfolio/static/css/main.02750bb0.css.map",
+    "main.ce055535.js.map": "/Rahul-portfolio/static/js/main.ce055535.js.map"
   },
   "entrypoints": [
-    "static/css/main.d10e35d6.css",
-    "static/js/main.406f2f54.js"
+    "static/css/main.02750bb0.css",
+    "static/js/main.ce055535.js"
   ]
 }
