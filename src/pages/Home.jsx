@@ -22,21 +22,18 @@ export default function Home() {
       setShowNavbar(false);
     }
   };
-  
 
   return (
     <div className="w-full h-full font-roboto bg-white flex items-center justify-between flex-col">
+      
       <NavBar show={showNavbar} />
-
       <MainContent />
-      <div className=''> 
+      <div className=''>
         <Portfolio />
-        
       </div>
       <div id="contactme" className="bg-white">
-  <ContactMe />
-  
-</div>
+        <ContactMe />
+      </div>
     </div>
   );
 }

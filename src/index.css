@@ -34,14 +34,7 @@ nav {
     }
   }
 
-  #portfolio, #contactMe {
-    opacity: 1;
-    transition: opacity 0.5s; /* Increase transition duration for a smoother effect */
-  }
-  
-  .visible {
-    opacity: 0;
-  }
+ 
   
   
   
