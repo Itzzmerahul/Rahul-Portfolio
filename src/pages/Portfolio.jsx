@@ -1,4 +1,4 @@
-import React, { useState, useEffect,useRef  } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './Portfolio1.css';
 import SkillCard from './SkillCard';
@@ -6,14 +6,14 @@ import SkillCard from './SkillCard';
 
 
 
-import java from './images/java.gif';
+import java from './images/java.svg';
 import ps3 from './images/ps3.png';
-import py1 from './images/py1.png';
-import ht1 from './images/ht1.png';
-import css from './images/css.avif';
-import js from './images/js.avif';
+import py1 from './images/py1.svg';
+import ht1 from './images/ht1.svg';
+import css from './images/css.svg';
+import js from './images/js1.png';
 import fi from './images/fi.webp';
-import da1 from './images/da1.jpg';
+import da1 from './images/da1.svg';
 
 const skillsData = [
   {
@@ -23,37 +23,37 @@ const skillsData = [
   },
   {
     title: 'Photoshop Express',
-    description: 'I am familiar with Photoshop Express, a user-friendly photo editing software. I have used it for basic photo editing tasks like cropping, adjusting colors, and applying filters. While I may not be an expert, I can confidently navigate and use Photoshop Express for simple photo enhancements and edits',
+    description: 'I have experience with Photoshop Express, a user-friendly photo editing software. I can efficiently use Photoshop Express for tasks like cropping, adjusting colors, and applying filters, making basic photo enhancements and edits with ease.',
     image: ps3,
   },
   {
     title: 'Python',
-    description: 'I have experience with Python, a versatile programming language. I have worked on various Python projects, including scripting, data analysis, and web development. I am comfortable with Pythons syntax and libraries, and I can efficiently write and debug Python code. While I continue to learn and improve my skills, I am confident in my ability to work with Python for a variety of tasks.',
+    description: 'I am familiar with Python, a versatile programming language. I have experience working with Python on various projects, which include scripting, data analysis, and web development. I am comfortable with Pythons syntax and libraries, and I can efficiently write and debug Python code.',
     image: py1,
   },
   {
     title: 'HTML',
-    description: 'I am familiar with HTML, a fundamental language for crafting web content. I use HTML to structure and design web pages, making information accessible and visually appealing. My experience with HTML includes building web pages, designing forms, and contributing to user-friendly website experiences.',
+    description: 'I have experience with HTML, a fundamental language for crafting web content. I use HTML to structure and design web pages, making information accessible and visually appealing. My familiarity with HTML includes building web pages,designing and many..',
     image: ht1,
   },
   {
     title: 'CSS',
-    description: 'I have a good grasp of CSS, an essential skill for enhancing the visual appeal of web pages. I have used CSS to make web content look better and more user-friendly. I am comfortable with styling HTML elements, creating responsive designs, and improving the overall aesthetics of websites',
+    description: 'I have a good understanding of CSS (Cascading Style Sheets), which is a fundamental web development technology used to enhance the visual appearance and layout of websites. With CSS, I can style HTML elements, create responsive designs, and improve the overall look and feel of web pages.',
     image: css,
   },
   {
     title: 'JavaScript',
-    description: 'I also know JavaScript, a versatile programming language for web development. I use JavaScript to enhance the functionality and interactivity of websites. My experience with JavaScript includes creating dynamic web elements, handling user interactions, and building responsive web applications',
+    description: 'I am familiar with JavaScript, a versatile programming language commonly used in web development. With JavaScript, I can add interactivity and dynamic elements to websites, enhancing their functionality. I have experience in creating dynamic web features, managing user interactions, many... ',
     image: js,
   },
   {
     title: 'Filmora',
-    description: 'I also know Filmora, a video editing software that allows me to create and edit videos with ease. I use Filmora to add special effects, transitions, and audio to my video projects. My experience with Filmora includes editing and producing engaging video content',
+    description: 'I am proficient in using Filmora, a user-friendly video editing software. With Filmora, I can easily create and edit videos by adding special effects, transitions, and audio enhancements. My experience with Filmora includes editing and producing captivating video content..',
     image: fi,
   },
   {
     title: 'Davinci Resolve',
-    description: 'I also know DaVinci Resolve, a powerful video editing and color correction software. I use DaVinci Resolve to edit and enhance videos, apply color grading, and create professional-quality video content. My experience with DaVinci Resolve includes working on video projects and achieving the desired visual effects.',
+    description: 'I am also familiar with DaVinci Resolve, a robust video editing and color correction software. DaVinci Resolve allows me to edit and enhance videos, apply professional-grade color grading, and create high-quality video content. ',
     image: da1,
   },
   // Repeat for the other 6 skills
@@ -61,7 +61,7 @@ const skillsData = [
 
 export default function Portfolio() {
   const [scrolling, setScrolling] = useState(false);
-  const [skillsAnimationTriggered, setSkillsAnimationTriggered] = useState(false);
+  
 
   // UseEffect to trigger the scroll animations
   useEffect(() => {
@@ -87,30 +87,37 @@ export default function Portfolio() {
   });
 
   const professionalOverviewStyle = {
-    fontFamily: 'Roboto',
-    backgroundColor: '#E9F1FA',
+    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+  
+  };
+
+  const professionalOverviewTextStyle = {
+    fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
+
+    padding: '10px',
+    
   };
 
   return (
     <div>
       <div id="portfolio" className="bg-white">
-        <div className="bg-#60A5FA flex items-center text-black justify-center gap-7 flex-col m-3">
-          <animated.div style={{ ...professionalOverviewAnimation }} className="p-3  flex flex-col items-center justify-between gap-10 lg:flex-row lg:p-4 text-md text-black w-full font-serif rounded-lg shadow-md">
-            <div className="rounded-lg shadow-lg h-full p-3 professional-overview" style={professionalOverviewStyle}>
-              <div className="lg:m-4 m-1 text-xl lg:text-2xl font-semibold text-black Portfolio1-font">My Professional Overview</div>
-              I am a dedicated and aspiring individual currently in my second year of Computer Science and Engineering at Dhirajlal Gandhi College of Technology. My passion for technology has led me to become proficient in a versatile set of programming languages and web development tools, including Java, Python, CSS, HTML, C, and JavaScript. I am committed to expanding my knowledge and skills in these domains, driven by the ambition to become a proficient web developer.
-              Throughout my academic journey, I have had the opportunity to work on a variety of projects, each of which has added to my practical experience and problem-solving skills. I believe in the power of technology to bring positive change, and I'm excited to use my skills to create applications that simplify everyday tasks and improve people's lives. Whether it's developing responsive websites, creating efficient algorithms, or designing user interfaces, I approach every project with enthusiasm and a determination to deliver high-quality results.
+        <div className="bg-white flex items-center text-black justify-center gap-7 flex-col m-3">
+          <animated.div style={{ ...professionalOverviewAnimation }} className=" flex flex-col items-center justify-between p-4 bg-white gap-10 lg:flex-row lg:p-2 text-md text-black w-full font-serif  shadow-md">
+            <div className="rounded-lg  h-full px-2 professional-overview" style={professionalOverviewStyle}>
+              <div className="lg:m-4 m-1  text-xl lg:text-2xl font-semibold text-secondary  Portfolio1-font">My Overview</div>
+              <div style={professionalOverviewTextStyle} className='text-secondary font-semibold bg-white-200 p-4'>
+                I am a dedicated and aspiring individual currently in my second year of Computer Science and Engineering at Dhirajlal Gandhi College of Technology. My passion for technology has led me to become proficient in a versatile set of programming languages and web development tools, including Java, Python, CSS, HTML, C, and JavaScript. I am committed to expanding my knowledge and skills in these domains, driven by the ambition to become a proficient web developer.
+                Throughout my academic journey, I have had the opportunity to work on a variety of projects, each of which has added to my practical experience and problem-solving skills. I believe in the power of technology to bring positive change, and I'm excited to use my skills to create applications that simplify everyday tasks and improve people's lives. Whether it's developing responsive websites, creating efficient algorithms, or designing user interfaces, I approach every project with enthusiasm and a determination to deliver high-quality results. In summary, my journey as a Computer Science and Engineering student has been filled with learning, growth, and a deep-seated passion for technology. I'm excited to embark on a lifelong journey of continuous learning and innovation, using my skills to make a positive impact on the world.
+              </div>
             </div>
           </animated.div>
         </div>
-        <div className="bg- p-2 rounded-md text-white m-2">
-          Checkout my Twitter & Instagram profiles for audio and video editing...
-        </div>
       </div>
       {/* "Skills" section with animation */}
-      <div className="bg-white">
-        <div className="text-xl font-bold text-black mt-5 mb-3 text-left pl-5">Skills</div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="bg-white m-3 rounded-">
+        
+        <div className="text-4xl font-bold text-black flex items-center justify-left p-2  ">Skills</div>
+        <div className=" md:p-2 lg:p-5 md:m-1 lg:m-5 my-2   flex items-center justify-center flex-wrap  gap-2 lg:gap-4">
           {skillsData.map((skill, index) => (
             <SkillCard key={index} skill={skill} index={index} />
           ))}

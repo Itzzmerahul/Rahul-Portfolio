@@ -29,13 +29,13 @@ export default function Maincontent() {
               }}
             />
           </div>
-          <div
+          <button
             onClick={() => scrollDownToContactMe()}
-            className="bg-black hover-bg-gray-600 text-white text-xl p-4 my-3 items-center justify-center w-[200px] cursor-pointer rounded-full mt-7"
+            className="bg-third hover-bg-gray-600 text-primary text-xl px-5 py-3 font-medium my-4 items-center justify-center w-[200px] cursor-pointer rounded-full mt-7"
             style={{ zIndex: 1 }} // Keep a higher z-index for the "Connect with Me" box
           >
             Connect with Me
-          </div>
+          </button>
         </div>
       </div>
       <img src={rahul} alt="" className="bg-cover lg:w-1/2 w-full h-full" />

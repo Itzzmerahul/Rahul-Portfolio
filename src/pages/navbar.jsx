@@ -13,7 +13,7 @@ export default function NavBar({ show }) {
 
   return (
     <nav
-      className={`fixed w-full -my-4 lg:-my-3  bg-black z-10 transition-transform ${
+      className={`fixed w-full -my-4 lg:-my-3  bg-secondary  z-10 transition-transform ${
         show ? 'translate-y-0' : '-translate-y-16'
       }`}
     >
@@ -26,13 +26,13 @@ export default function NavBar({ show }) {
               offset={-50} // Adjust this offset as needed
               onClick={() => handleScrollTo('mainContent')}
             >
-              <h2 className="text-2xl font-bold text-white cursor-pointer">
+              <h2 className="text-2xl font-bold text-primary cursor-pointer">
                 Hey There!
               </h2>
             </Link>
             <div className="md:hidden">
               <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2 text-primary rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
@@ -75,7 +75,7 @@ export default function NavBar({ show }) {
             }`}
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-white hover:text-indigo-200">
+              <li className="text-primary hover:text-indigo-200">
                 <Link
                   to="mainContent"
                   smooth={true}
@@ -85,7 +85,7 @@ export default function NavBar({ show }) {
                   Home
                 </Link>
               </li>
-              <li className="text-white hover:text-indigo-200">
+              <li className="text-primary hover:text-indigo-200">
                 <Link
                   to="portfolio"
                   smooth={true}
@@ -94,7 +94,7 @@ export default function NavBar({ show }) {
                   Portfolio
                 </Link>
               </li>
-              <li className="text-white hover:text-indigo-200">
+              <li className="text-primary hover:text-indigo-200">
                 <Link
                   to="contactMe"
                   smooth={true}

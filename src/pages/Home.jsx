@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-full h-full font-roboto bg-white flex items-center justify-between flex-col">
+    <div className="w-full h-full font-roboto  flex items-center justify-between flex-col">
       
       <NavBar show={showNavbar} />
       <MainContent />
