@@ -13,7 +13,7 @@ export default function NavBar({ show }) {
 
   return (
     <nav
-      className={`fixed w-full -my-4 lg:-my-3  bg-secondary  z-10 transition-transform ${
+      className={`fixed w-full -my-4 lg:-my-3  bg-black  z-10 transition-transform ${
         show ? 'translate-y-0' : '-translate-y-16'
       }`}
     >
@@ -26,7 +26,7 @@ export default function NavBar({ show }) {
               offset={-50} // Adjust this offset as needed
               onClick={() => handleScrollTo('mainContent')}
             >
-              <h2 className="text-2xl font-bold text-primary cursor-pointer">
+              <h2 className="text-2xl font-bold text-white cursor-pointer">
                 Hey There!
               </h2>
             </Link>

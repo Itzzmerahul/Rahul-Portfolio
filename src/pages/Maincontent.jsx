@@ -31,7 +31,7 @@ export default function Maincontent() {
           </div>
           <button
             onClick={() => scrollDownToContactMe()}
-            className="bg-third hover-bg-gray-600 text-primary text-xl px-5 py-3 font-medium my-4 items-center justify-center w-[200px] cursor-pointer rounded-full mt-7"
+            className="bg-black hover-bg-gray-600 text-white text-xl px-5 py-3 font-medium my-4 items-center justify-center w-[200px] cursor-pointer rounded-full mt-7"
             style={{ zIndex: 1 }} // Keep a higher z-index for the "Connect with Me" box
           >
             Connect with Me

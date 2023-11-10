@@ -9,9 +9,9 @@ import SkillCard from './SkillCard';
 import java from './images/java.svg';
 import ps3 from './images/ps3.png';
 import py1 from './images/py1.svg';
-import ht1 from './images/ht1.svg';
+import ht2 from './images/ht2.svg';
 import css from './images/css.svg';
-import js from './images/js1.png';
+import js from './images/js1.svg';
 import fi from './images/fi.webp';
 import da1 from './images/da1.svg';
 
@@ -34,7 +34,7 @@ const skillsData = [
   {
     title: 'HTML',
     description: 'I have experience with HTML, a fundamental language for crafting web content. I use HTML to structure and design web pages, making information accessible and visually appealing. My familiarity with HTML includes building web pages,designing and many..',
-    image: ht1,
+    image: ht2,
   },
   {
     title: 'CSS',
@@ -99,10 +99,10 @@ export default function Portfolio() {
   };
 
   return (
-    <div>
+    <div className='w-full'>
       <div id="portfolio" className="bg-white">
         <div className="bg-white flex items-center text-black justify-center gap-7 flex-col m-3">
-          <animated.div style={{ ...professionalOverviewAnimation }} className=" flex flex-col items-center justify-between p-4 bg-white gap-10 lg:flex-row lg:p-2 text-md text-black w-full font-serif  shadow-md">
+          <animated.div style={{ ...professionalOverviewAnimation }} className=" flex flex-col items-center justify-between p-4 bg-white gap-10 lg:flex-row lg:p-2 text-md text-black  font-serif  shadow-md">
             <div className="rounded-lg  h-full px-2 professional-overview" style={professionalOverviewStyle}>
               <div className="lg:m-4 m-1  text-xl lg:text-2xl font-semibold text-secondary  Portfolio1-font">My Overview</div>
               <div style={professionalOverviewTextStyle} className='text-secondary font-semibold bg-white-200 p-4'>
