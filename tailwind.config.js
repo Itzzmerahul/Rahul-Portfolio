@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class', // enable dark mode
   theme: {
     extend: {
       colors:{
@@ -10,11 +11,12 @@ module.exports = {
         secondary:"#45474B",
         third:"#495E57"
       },
+fontFamily:{
 
-      fontFamily:{
-        lora: "'Roboto', sans-serif",
-        new: "Helvetica Neue,Helvetica,Arial,sans-serif"
-      }
+  hello: "'Quicksand', sans-serif",
+
+}
+    
     },
   },
   plugins: [],
