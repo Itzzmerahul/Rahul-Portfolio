@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/Rahul-portfolio/static/css/main.87a6611a.css",
-    "main.js": "/Rahul-portfolio/static/js/main.473939ae.js",
+    "main.css": "/Rahul-portfolio/static/css/main.102b0063.css",
+    "main.js": "/Rahul-portfolio/static/js/main.1992c7e0.js",
+    "static/js/114.9a413f45.chunk.js": "/Rahul-portfolio/static/js/114.9a413f45.chunk.js",
+    "static/js/713.ca04bac1.chunk.js": "/Rahul-portfolio/static/js/713.ca04bac1.chunk.js",
+    "static/js/458.f7498136.chunk.js": "/Rahul-portfolio/static/js/458.f7498136.chunk.js",
+    "static/media/4.mp3": "/Rahul-portfolio/static/media/4.ef7ed803332508d7dd9c.mp3",
     "static/media/itzme10.jpg": "/Rahul-portfolio/static/media/itzme10.bbd9b14ab5da9b888e0f.jpg",
     "static/media/itzme8.jpg": "/Rahul-portfolio/static/media/itzme8.1ea5be09633223b3a4b7.jpg",
     "static/media/ps3.png": "/Rahul-portfolio/static/media/ps3.659f9b7cd17bd19e3b7e.png",
     "static/media/fi.webp": "/Rahul-portfolio/static/media/fi.9118b646ad32ffb52d52.webp",
     "static/media/Contact us-bro.svg": "/Rahul-portfolio/static/media/Contact us-bro.688f3bb6fdc866bdc33e8a937be6da02.svg",
+    "static/media/rahul3.jpeg": "/Rahul-portfolio/static/media/rahul3.e35ca2f25c9ee43130e6.jpeg",
     "static/media/he.jpg": "/Rahul-portfolio/static/media/he.d4b77ea970943a2fdc23.jpg",
-    "static/media/profile-img.png": "/Rahul-portfolio/static/media/profile-img.5179e446ac1a570ce69b.png",
     "static/media/py1.svg": "/Rahul-portfolio/static/media/py1.6d275b32b02b333a7928944fbd8ae189.svg",
     "static/media/java.svg": "/Rahul-portfolio/static/media/java.7ea5f3cd13c298dc043942bb8d44070a.svg",
     "static/media/da1.svg": "/Rahul-portfolio/static/media/da1.ba263cd36e45a3584d9d4166935fb4ca.svg",
@@ -16,11 +20,14 @@
     "static/media/ht2.svg": "/Rahul-portfolio/static/media/ht2.398d791f54b4b6f1226987ada2294ca5.svg",
     "index.html": "/Rahul-portfolio/index.html",
     "static/media/js1.svg": "/Rahul-portfolio/static/media/js1.b879f838faf1cb951d1c2230fd933a39.svg",
-    "main.87a6611a.css.map": "/Rahul-portfolio/static/css/main.87a6611a.css.map",
-    "main.473939ae.js.map": "/Rahul-portfolio/static/js/main.473939ae.js.map"
+    "main.102b0063.css.map": "/Rahul-portfolio/static/css/main.102b0063.css.map",
+    "main.1992c7e0.js.map": "/Rahul-portfolio/static/js/main.1992c7e0.js.map",
+    "114.9a413f45.chunk.js.map": "/Rahul-portfolio/static/js/114.9a413f45.chunk.js.map",
+    "713.ca04bac1.chunk.js.map": "/Rahul-portfolio/static/js/713.ca04bac1.chunk.js.map",
+    "458.f7498136.chunk.js.map": "/Rahul-portfolio/static/js/458.f7498136.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87a6611a.css",
-    "static/js/main.473939ae.js"
+    "static/css/main.102b0063.css",
+    "static/js/main.1992c7e0.js"
   ]
 }
