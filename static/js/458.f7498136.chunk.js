@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[458],{5458:function(n,o,e){e.r(o);var i,r=e(168),l=(e(2791),e(5867)),t=(e(3850),e(184)),c=l.ZP.h1(i||(i=(0,r.Z)(["\ndisplay: inline-block;\ncolor: gray;\nfont-family: 'Pacifico',cursive;\n\nposition: fixed;\nleft: 1.5rem;\ntop: 4.5rem;\nz-index:3;\n"])));o.default=function(n){return(0,t.jsx)(c,{color:n.theme,children:"RK"})}}}]);
-//# sourceMappingURL=458.f7498136.chunk.js.map
