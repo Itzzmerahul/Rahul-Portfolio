@@ -12,7 +12,7 @@ const Icons = styled.div`
 
   position: fixed;
   bottom: 0;
-  left: 2rem;
+  left: 0rem;
 
   z-index: 3;
 
@@ -25,7 +25,7 @@ const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
   background-color: ${(props) =>
-    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+    props.color === "" ? DarkTheme.text : DarkTheme.body};
 `;
 
 const SocialIcons = (props) => {
@@ -39,12 +39,12 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://github.com/codebucks27"}
+          href={"https://github.com/Itzzmerahul"}
         >
           <Github
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
@@ -56,12 +56,12 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://twitter.com/code_bucks"}
+          href={"https://twitter.com/@itzzmerahul___"}
         >
           <Twitter
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
@@ -73,12 +73,12 @@ const SocialIcons = (props) => {
         <a
           style={{ color: "inherit" }}
           target="_blank"
-          href={"https://facebook.com/codebucks27"}
+          href={"https://facebook.com"}
         >
           <Facebook
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>
@@ -95,7 +95,7 @@ const SocialIcons = (props) => {
           <YouTube
             width={25}
             height={25}
-            fill={props.theme === "dark" ? DarkTheme.text : DarkTheme.body}
+            fill={props.theme === "" ? DarkTheme.text : DarkTheme.body}
           />
         </a>
       </motion.div>

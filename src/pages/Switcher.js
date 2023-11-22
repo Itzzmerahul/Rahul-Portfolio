@@ -13,7 +13,7 @@ export default function Switcher() {
 
   return (
     <>
-      <div className='p-2 rounded-xl border-2 border-black dark:border-white'>
+      <div className='fixed top-16 right-24 p-2 rounded-xl border-2 border-black dark:border-white'>
         <DarkModeSwitch checked={darkSide} onChange={toggleDarkMode} size={25} />
       </div>
     </>

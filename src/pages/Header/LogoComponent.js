@@ -7,19 +7,19 @@ import { DarkTheme } from './Themes'
 
 const Logo = styled.h1`
 display: inline-block;
-color: ${props => props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
+color: gray;
 font-family: 'Pacifico',cursive;
 
 position: fixed;
-left: 2rem;
-top: 2rem;
+left: 1.5rem;
+top: 4.5rem;
 z-index:3;
 `
 
 const LogoComponent = (props) => {
     return (
         <Logo color={props.theme}>
-          CB
+          RK
         </Logo>
     )
 }
