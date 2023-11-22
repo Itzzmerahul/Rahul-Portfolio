@@ -80,12 +80,12 @@ height:50vh;
     border-top: 2px solid ${(props) => props.theme.body};
     border-bottom: 2px solid ${(props) => props.theme.text};
     background-image: linear-gradient(
-        ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        50%,
+        black 50%
       ),
       linear-gradient(
-        ${(props) => props.theme.body} 50%,
-        ${(props) => props.theme.text} 50%
+        50%,
+       black 50%
       );
     background-size: 2px 100%;
     background-position: 0 0, 100% 0;
@@ -168,7 +168,7 @@ const Text = styled(motion.div)`
 
     ${mediaQueries(50)`
         font-size: calc(0.5rem + 1vw);
-        color: white;
+        color: black;
 
 
   `};
@@ -176,12 +176,12 @@ const Text = styled(motion.div)`
 
   ${mediaQueries(40)`
         font-size: calc(1rem + 1.5vw);
-        color: white;
+        color: black;
 
   `};
   ${mediaQueries(20)`
          padding: 1rem;
-         color:white;
+         color:black;
 
 
   `};
@@ -227,7 +227,7 @@ const Intro = () => {
             />
           </div>
 
-          <h6 className="mt-5"> I design and Code simple yet beautiful websites.</h6>
+          <h6 className="mt-5"> I'm a coder and designer transforming ideas into digital elegance. </h6>
         </Text>
         </motion.div>
       </SubBox>

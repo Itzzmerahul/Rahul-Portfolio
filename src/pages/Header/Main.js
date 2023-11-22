@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 //Components
@@ -14,13 +14,8 @@ const SocialIcons = lazy(() => import("./../Header/SocialIcons"));
 
 const LogoComponent = lazy(() => import("./../Header/LogoComponent"));
 
-//   import SocialIcons from './../subComponents/SocialIcons';
-// import LogoComponent from './../subComponents/LogoComponent';
-
 const MainContainer = styled(motion.div)`
-background: ${(props) => (props.isMobile ? "white" : "white")};
-
- 
+  background: ${(props) => (props.isMobile ? "black" : "white")};
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -32,26 +27,26 @@ background: ${(props) => (props.isMobile ? "white" : "white")};
   h5,
   h6 {
     font-family: "Karla", sans-serif;
-
     font-weight: 500;
   }
 
   h2 {
     ${mediaQueries(40)`
       font-size:1.2em;
-
-  `};
+    `};
 
     ${mediaQueries(30)`
       font-size:1em;
+    `};
+  }
 
-  `};
+  @media only screen and (max-width: 50em) {
+    background: ${(props) => (props.initialLoad && props.isMobile ? "white" : "black")};
   }
 `;
 
 const Container = styled.div`
   padding: 2rem;
-  
 `;
 
 const rotate = keyframes`
@@ -89,10 +84,12 @@ const Center = styled.button`
     left: ${(props) => (props.click ? "90%" : "50%")};
     width: ${(props) => (props.click ? "80px" : "150px")};
     height: ${(props) => (props.click ? "80px" : "150px")};
+    
   }
   @media only screen and (max-width: 30em) {
     width: ${(props) => (props.click ? "40px" : "150px")};
     height: ${(props) => (props.click ? "40px" : "150px")};
+    
   }
 `;
 
@@ -146,66 +143,52 @@ const DarkDiv = styled.div`
   top: 0;
   bottom: 0;
   right: 50%;
-  width: ${(props) => (props.click ? "50%" : "0%")};
+  width: ${(props) => (props.visible ? "50%" : "0%")};
   background-color: yellow;
-  height: ${(props) => (props.click ? "100%" : "0%")};
+  height: ${(props) => (props.visible ? "100%" : "0%")};
   transition: height 0.5s ease, width 1s ease 0.5s;
   z-index: 1;
 
-  
-
   ${(props) =>
-    props.click
+    props.visible
       ? mediaQueries(50)`
        height: 50%;
   right:0;
- 
   
   width: 100%;
   transition: width 0.5s ease, height 1s ease 0.5s;
-
   `
       : mediaQueries(50)`
        height: 0;
-       
-
   
   width: 0;
-
-  
   `};
 `;
+
 const LightDiv = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: ${(props) => (props.click ? "50%" : "0%")};
-  background-color: black ;
-  height: ${(props) => (props.click ? "100%" : "0%")};
+  width: ${(props) => (props.visible ? "50%" : "0%")};
+  background-color: ${(props) => (props.isMobile ? "yellow" : "black")};
+  height: ${(props) => (props.visible ? "100%" : "0%")};
   transition: height 0.5s ease, width 1s ease 0.5s;
   z-index: 1;
-  
-
-  
 
   ${(props) =>
-    props.click
+    props.visible
       ? mediaQueries(50)`
        height: 50%;
   left:0;
   
-  
   width: 100%;
   transition: width 0.5s ease, height 1s ease 0.5s;
-
   `
       : mediaQueries(50)`
        height: 0;
   
   width: 0;
-
-  
   `};
 `;
 
@@ -218,8 +201,24 @@ Music by <a href="/users/wataboi-12344345/?tab=audio&amp;utm_source=link-attribu
 const Main = () => {
   const [click, setClick] = useState(false);
   const [path, setpath] = useState("");
+  const [initialLoad, setInitialLoad] = useState(true);
 
-  const handleClick = () => setClick(!click);
+  useEffect(() => {
+    // Set initialLoad to false after a short delay
+    const timeoutId = setTimeout(() => {
+      setInitialLoad(false);
+    }, 100); // You can adjust the delay as needed
+
+    // Clear the timeout to avoid memory leaks
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  const [isBackgroundVisible, setIsBackgroundVisible] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+    setIsBackgroundVisible(!isBackgroundVisible);
+  };
 
   const moveY = {
     y: "-100%",
@@ -241,9 +240,10 @@ const Main = () => {
       exit={path === "about" || path === "skills" ? moveY : moveX}
       transition={{ duration: 0.5 }}
       isMobile={isMobile}
-      >
-        <DarkDiv click={click} />
-        <LightDiv click={click} />
+      initialLoad={initialLoad}
+    >
+      <DarkDiv visible={isBackgroundVisible} />
+      <LightDiv visible={isBackgroundVisible} isMobile={isMobile} />
        
 
         <Container>
@@ -260,64 +260,21 @@ const Main = () => {
                 onClick={() => handleClick()}
                 width={click ? 80 : 150}
                 height={click ? 80 : 150}
-                fill="currentColor"
+                fill="white"
               />
             ) : (
               <YinYang
                 onClick={() => handleClick()}
                 width={click ? 120 : 200}
                 height={click ? 120 : 200}
-                fill="currentColor"
+                fill="gray"
               />
             )}
 
-            <span>click here</span>
+            <span className="text-gray-600">click here</span>
           </Center>
 
-          {mq ? (
-            <Contact
-              click={+click}
-              target="_blank"
-              href="https://devdreaming.com/about"
-            >
-              <motion.h3
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Say hi..
-              </motion.h3>
-            </Contact>
-          ) : (
-            <Contact
-              click={+false}
-              target="_blank"
-              href="https://devdreaming.com/about"
-            >
-              <motion.h3
-                initial={{
-                  y: -200,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                animate={{
-                  y: 0,
-                  transition: { type: "spring", duration: 1.5, delay: 1 },
-                }}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                Say hi..
-              </motion.h3>
-            </Contact>
-          )}
-
+         
           {mq ? (
             <BLOG click={+click} onClick={() => setpath("blog")} to="/blog">
               <motion.h2

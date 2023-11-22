@@ -7,35 +7,41 @@ import { PowerBtn } from './AllSvgs'
 
 
 const Power = styled.button`
-position: fixed;
-top: 4.2rem;
-left: 95%;
-transform: translate(-50%, 0);
+  position: fixed;
+  top: 4.5rem;
+  left: 95%;
+  transform: translate(-50%, 0);
 
-background-color: #FCF6F4;
-padding: 0.3rem;
-border-radius: 50%;
-border: 1px solid #000;
-width: 2.5rem;
-height: 2.5rem;
+  background-color: #FCF6F4;
+  padding: 0.3rem;
+  border-radius: 50%;
+  border: 1px solid #000;
+  width: 2.5rem;
+  height: 2.5rem;
 
-display: flex;
-justify-content: center;
-align-items:center;
-z-index:3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 
-cursor: pointer;
+  cursor: pointer;
 
-&:hover{
-    background-color: rgba(0,255,0,0.4);
-    box-shadow: 0 0 8px 6px rgba(0,255,0,0.2);
-}
+  &:hover {
+    background-color: rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 8px 6px rgba(0, 255, 0, 0.2);
+  }
 
-&>*:first-child{
+  & > *:first-child {
     text-decoration: none;
     color: inherit;
-}
-`
+  }
+
+  @media only screen and (max-width: 50em) {
+    /* Adjust the position for smaller screens */
+    top: 5.2rem;
+    left: 93%;
+  }
+`;
 
 const PowerButton = () => {
     return (

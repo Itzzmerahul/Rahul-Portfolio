@@ -14,6 +14,10 @@ position: fixed;
 left: 1.5rem;
 top: 4.5rem;
 z-index:3;
+
+@media (max-width: 767px) {
+  left: 2rem;
+  top: 5.6rem;
 `
 
 const LogoComponent = (props) => {

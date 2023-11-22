@@ -7,6 +7,8 @@ import ContactMe from './contactme';
 import Switcher from './Switcher';
 import Card from './Card';
 import Skill from './Skill';
+import { ThemeProvider } from 'styled-components';
+
 import Main from './Header/Main';
 
 
@@ -28,12 +30,22 @@ export default function Home() {
     }
   };
 
+  const theme = {
+    body: 'your-text-color',
+    text: 'your-body-color',
+   
+    // Add other theme properties as needed
+  };
+  
+
   return (
     // <div className="w-full h-full font-roboto  flex items-center justify-between flex-col">
       
    
       <div className="min-h-screen  w-full h-full font-roboto bg-white dark:bg-black   justify-between flex-col flex  items-center transition duration-200 gap-5  p-10">
+      <ThemeProvider theme={theme}>
        <Main/>
+       </ThemeProvider>
       <NavBar show={showNavbar} />
      
 <MainContent/>
@@ -44,7 +56,7 @@ export default function Home() {
         <ContactMe />
    
      
-  
+        
     </div>
   /* <NavBar show={showNavbar} />
       <MainContent />
