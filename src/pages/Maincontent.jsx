@@ -3,6 +3,7 @@ import empty from './images/itzme8.jpg';
 import rahul from './images/itzme10.jpg';
 import Typewriter from 'typewriter-effect';
 import Switcher from './Switcher';
+import SoundBar from './SoundBar';
 
 export default function Maincontent() {
   const typeStrings = ['CSE Student', 'Designer', 'Developer']; // Add more strings as needed
@@ -20,7 +21,7 @@ export default function Maincontent() {
       <Switcher/>
       </div>
       <div className="flex items-center justify-center main-content">
-   
+    
        
           <button
             onClick={() => scrollDownToContactMe()}
@@ -29,6 +30,7 @@ export default function Maincontent() {
           >
               Say hi
           </button>
+          
         </div>
       </div>
     

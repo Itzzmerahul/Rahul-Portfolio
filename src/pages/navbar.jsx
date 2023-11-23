@@ -12,9 +12,9 @@ export default function NavBar({ show }) {
   };
 
   return (
-    <nav
-      className={`fixed w-full -my-12 lg:-my-12  bg-white dark:bg-gray-800  z-10 transition-transform ${
-        show ? 'translate-y-0' : '-translate-y-16'
+      <nav
+        className={`fixed w-full -my-12 lg:-my-8 bg-white dark:bg-gray-800 z-10 transition-transform ${
+          show ? 'translate-y-0' : '-translate-y-16'
       }`}
     >
       <div className="justify-between px-4 md:items-center md:flex md:px-8 ">

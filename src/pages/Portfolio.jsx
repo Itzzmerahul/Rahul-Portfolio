@@ -34,12 +34,6 @@ export default function Portfolio() {
   
   // };
 
-  const professionalOverviewTextStyle = {
-    fontFamily: "'Quicksand', sans-serif",
-
-    padding: '10px',
-    
-  };
 
  
 

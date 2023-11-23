@@ -7,9 +7,10 @@ import ContactMe from './contactme';
 import Switcher from './Switcher';
 import Card from './Card';
 import Skill from './Skill';
-import { ThemeProvider } from 'styled-components';
+import Maincontent from './Maincontent';
+import MainPage from './MainPage';
+import SkillCard from './SkillCard';
 
-import Main from './Header/Main';
 
 
 export default function Home() {
@@ -30,42 +31,45 @@ export default function Home() {
     }
   };
 
-  const theme = {
-    body: 'your-text-color',
-    text: 'your-body-color',
-   
-    // Add other theme properties as needed
-  };
   
 
-  return (
-    // <div className="w-full h-full font-roboto  flex items-center justify-between flex-col">
+  return ( // <div className="  font-roboto bg-white dark:bg-black justify-between flex-col flex items-center transition duration-200  ">
       
-   
-      <div className="min-h-screen  w-full h-full font-roboto bg-white dark:bg-black   justify-between flex-col flex  items-center transition duration-200 gap-5  p-10">
-      <ThemeProvider theme={theme}>
-       <Main/>
-       </ThemeProvider>
-      <NavBar show={showNavbar} />
-     
-<MainContent/>
-        <Portfolio />
-        <Skill/>
+    //    <div className=''>
+    //    <NavBar show={showNavbar}  />
+
+    //    </div>
+    //    <MainPage/>
+    //  <Maincontent/>
+
+    //     <Portfolio />
+    //     <Skill/>
     
         
-        <ContactMe />
+    //     <ContactMe />
    
      
         
-    </div>
-  /* <NavBar show={showNavbar} />
-      <MainContent />
+    // </div>
+   
+    <div className="w-full h-full font-roboto  flex items-center justify-between transition duration-200  flex-col">
+      
+   
+    
+ 
+      {/* <MainContent /> */}
+      <MainPage/>
       <div className=''>
         <Portfolio />
       </div>
+      <div>
+        <Skill/>
+      </div>
       <div id="contactme" className="bg-white">
         <ContactMe />
-      </div> */
-    /* </div> */
+        
+      </div> 
+     
+     </div> 
   );
 }

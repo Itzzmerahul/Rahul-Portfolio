@@ -20,7 +20,7 @@ const SkillCard = ({ skill, index }) => {
       style={skillCardAnimation}
       className="border border-blue-700 bg-white dark:bg-gray-800  hover:border-orange-300 p-3 mx-2 rounded-xl shadow-xl  mb-4 "
     >
-      <div className=' h-[410px]  lg:h-[405px] w-[350px] lg:w-[330px]  flex flex-col items-center justify-center lg:p-0 p-5 hover:p-3'>
+      <div className=' h-[450px]  lg:h-[405px] w-[310px] lg:w-[330px]  flex flex-col items-center justify-center lg:p-0 p-5 hover:p-3'>
       <div className="mb-2">
         <img src={skill.image} alt={skill.title} className=" h-[160px] lg:h-[100px] w-full my-4" />
       </div>

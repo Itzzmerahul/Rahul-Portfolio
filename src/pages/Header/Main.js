@@ -6,8 +6,12 @@ import { motion } from "framer-motion";
 //Components
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
+import Switcher from "../Switcher";
 
 import { mediaQueries } from "./Themes";
+import SoundBar from "../SoundBar";
+import Maincontent from "../Maincontent";
+
 
 const PowerButton = lazy(() => import("../Header/PowerButton"));
 const SocialIcons = lazy(() => import("./../Header/SocialIcons"));
@@ -174,7 +178,7 @@ const LightDiv = styled.div`
   background-color: ${(props) => (props.isMobile ? "yellow" : "black")};
   height: ${(props) => (props.visible ? "100%" : "0%")};
   transition: height 0.5s ease, width 1s ease 0.5s;
-  z-index: 1;
+  z-index: 0;
 
   ${(props) =>
     props.visible
@@ -248,12 +252,10 @@ const Main = () => {
 
         <Container>
           <LogoComponent theme={click ? "dark" : "light"} />
+           
           <PowerButton />
-          {mq ? (
-            <SocialIcons theme="light" />
-          ) : (
-            <SocialIcons theme={click ? "dark" : "light"} />
-          )}
+          
+         
           <Center click={click}>
             {mq ? (
               <YinYang

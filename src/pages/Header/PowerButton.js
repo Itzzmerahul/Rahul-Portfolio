@@ -7,8 +7,9 @@ import { PowerBtn } from './AllSvgs'
 
 
 const Power = styled.button`
-  position: fixed;
-  top: 4.5rem;
+ 
+  position:relative;
+  top: 1rem;
   left: 95%;
   transform: translate(-50%, 0);
 
@@ -22,7 +23,8 @@ const Power = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index:3;
+ 
 
   cursor: pointer;
 
@@ -38,8 +40,8 @@ const Power = styled.button`
 
   @media only screen and (max-width: 50em) {
     /* Adjust the position for smaller screens */
-    top: 5.2rem;
-    left: 93%;
+    top: -2.9rem;
+    left: 103%;
   }
 `;
 

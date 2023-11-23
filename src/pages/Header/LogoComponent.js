@@ -10,14 +10,14 @@ display: inline-block;
 color: gray;
 font-family: 'Pacifico',cursive;
 
-position: fixed;
-left: 1.5rem;
-top: 4.5rem;
+position: relative;
+left: 4.3rem;
+top: 2.5rem;
 z-index:3;
 
 @media (max-width: 767px) {
-  left: 2rem;
-  top: 5.6rem;
+  left: -0.6rem;
+  top: -0.8rem;
 `
 
 const LogoComponent = (props) => {
