@@ -34,7 +34,7 @@ export default function MainPage() {
 
 <ThemeProvider theme={theme}>
        <Main/>
-       <Switcher/>
+       
        </ThemeProvider>
     </div>
   )

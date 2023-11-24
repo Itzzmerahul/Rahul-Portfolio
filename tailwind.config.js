@@ -14,6 +14,7 @@ module.exports = {
 fontFamily:{
 
   hello: "'Quicksand', sans-serif",
+  m: "'Space Mono', monospace"
 
 }
     

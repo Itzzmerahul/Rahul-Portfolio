@@ -23,7 +23,7 @@ export default function Contactme() {
       ref={ref}
       style={contactFormAnimation}
       
-      className='bg-white shadow-xl  shadow-gray-600 dark:shadow-gray-600  dark:bg-gray-800  border-black dark:border-white  w-[340px] lg:w-full m-1 lg:px-10 p-1 flex flex-col rounded-md  border-2 border-opacity-50  items-center justify-center'
+      className='bg-white shadow-xl  shadow-gray-600 dark:shadow-gray-600  dark:bg-black  border-black dark:border-white  w-[340px] lg:w-full m-1 lg:px-10 p-1 flex flex-col rounded-md  border-2 border-opacity-50  items-center justify-center'
     >
       <div className='w-full'>
         <h2 className="text-2xl text-black p-2 dark:text-white font-semibold">Contact Me</h2>

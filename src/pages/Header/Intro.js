@@ -102,7 +102,7 @@ const SubBox = styled.div`
   .pic {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 51%;
     transform: translate(-50%, 0%);
     width: 100%;
     height: auto;
@@ -167,7 +167,7 @@ const Text = styled(motion.div)`
     font-weight: 300;
 
     ${mediaQueries(50)`
-        font-size: calc(0.5rem + 1vw);
+        font-size: calc(0.7rem + 1vw);
         color: black;
 
 
@@ -213,11 +213,11 @@ const Intro = () => {
           transition={{ duration: 1, delay: 2 }}
         >
         <Text>
-          <h1>Hi,</h1>
+          <h1 className="text-3xl">Hi,</h1>
 
-          <h3 className="mt5">I'm Rahul Krishna.</h3>
+          <h3 className="text-clip mt-2">I'm Rahul Krishna.</h3>
 
-          <div className="text-2xl font-semibold  items-center flex justify-start mt-6">
+          <div className=" text-2xl font-semibold  items-center flex justify-start mt-3">
             <Typewriter
               options={{
                 strings: typeStrings,

@@ -18,14 +18,14 @@ const SkillCard = ({ skill, index }) => {
     <animated.div
       ref={ref}
       style={skillCardAnimation}
-      className="border border-blue-700 bg-white dark:bg-gray-800  hover:border-orange-300 p-3 mx-2 rounded-xl shadow-xl  mb-4 "
+      className="border border-blue-700 bg-white dark:bg-white  hover:border-orange-300 p-3 mx-2 rounded-xl shadow-xl  mb-4 "
     >
       <div className=' h-[450px]  lg:h-[405px] w-[310px] lg:w-[330px]  flex flex-col items-center justify-center lg:p-0 p-5 hover:p-3'>
       <div className="mb-2">
         <img src={skill.image} alt={skill.title} className=" h-[160px] lg:h-[100px] w-full my-4" />
       </div>
       {/* <div className="text-xl font-semibold text-black items-center justify-center flex">{skill.title}</div> */}
-      <p className="dark:text-white  text-gray-800  flex items-center justify-center p-3 text-center"style={{ fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif", fontSize: '18px' }}>{skill.description}</p>
+      <p className="dark:text-black  text-black flex items-center justify-center p-3 text-center"style={{ fontFamily: "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" , fontSize: '18px' }}>{skill.description}</p>
       </div>
     </animated.div>
   );

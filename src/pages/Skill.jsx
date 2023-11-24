@@ -55,9 +55,9 @@ const skillsData = [
 ];
 export default function Skill() {
   return (
-    <div>  <div className="bg-white dark:bg-gray-800 m-3 rounded-">
+    <div>  <div className="bg-white dark:bg-black m-3 rounded-">
         
-    <div className="text-4xl font-bold dark:text-gray-800 text-white flex items-center justify-left p-2  ">Skills</div>
+    <div className="text-4xl font-bold dark:text-white text-white flex items-center justify-left p-2  ">Skills</div>
     <div className=" md:p-2 lg:p-5 md:m-1 lg:m-5 my-2   flex items-center justify-center flex-wrap  gap-2 lg:gap-4">
       {skillsData.map((skill, index) => (
         <SkillCard key={index} skill={skill} index={index} />

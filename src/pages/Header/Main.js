@@ -158,6 +158,7 @@ const DarkDiv = styled.div`
       ? mediaQueries(50)`
        height: 50%;
   right:0;
+  z-index: 0;
   
   width: 100%;
   transition: width 0.5s ease, height 1s ease 0.5s;
@@ -185,6 +186,7 @@ const LightDiv = styled.div`
       ? mediaQueries(50)`
        height: 50%;
   left:0;
+  z-index: 0;
   
   width: 100%;
   transition: width 0.5s ease, height 1s ease 0.5s;
@@ -193,6 +195,7 @@ const LightDiv = styled.div`
        height: 0;
   
   width: 0;
+  z-index: 0;
   `};
 `;
 
@@ -252,7 +255,7 @@ const Main = () => {
 
         <Container>
           <LogoComponent theme={click ? "dark" : "light"} />
-           
+           <Switcher/>
           <PowerButton />
           
          

@@ -9,8 +9,8 @@ import { PowerBtn } from './AllSvgs'
 const Power = styled.button`
  
   position:relative;
-  top: 1rem;
-  left: 95%;
+  top: 0.1rem;
+  left: 97%;
   transform: translate(-50%, 0);
 
   background-color: #FCF6F4;
@@ -41,7 +41,7 @@ const Power = styled.button`
   @media only screen and (max-width: 50em) {
     /* Adjust the position for smaller screens */
     top: -2.9rem;
-    left: 103%;
+    left: 100%;
   }
 `;
 

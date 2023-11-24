@@ -52,7 +52,7 @@ export default function Home() {
         
     // </div>
    
-    <div className="w-full h-full font-roboto  flex items-center justify-between transition duration-200  flex-col">
+    <div className="w-full h-full bg-white dark:bg-black font-roboto  flex items-center justify-between transition duration-200  flex-col">
       
    
     
