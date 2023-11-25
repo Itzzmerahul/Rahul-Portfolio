@@ -20,7 +20,7 @@ export default function Switcher() {
   return (
     <div
       className={`fixed ${
-        isMobile ? 'top-4 right-20' : 'top-16 right-29 md:top-16 md:right-28'
+        isMobile ? 'top-5 right-20' : 'top-16 right-29 md:top-16 md:right-28'
       } rounded-lg border-20 border-red dark:border-gray z-30`}
     >
       <DarkModeSwitch

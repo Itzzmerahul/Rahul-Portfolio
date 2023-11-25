@@ -6,6 +6,7 @@ import styled, { keyframes } from "styled-components";
 import music1 from "../pages/assets/audio/21.mp3";
 import music2 from "../pages/assets/audio/20.mp3";
 import music3 from "../pages/assets/audio/22.mp3";
+import music4 from "../pages/assets/audio/2.mp3";
 import { mediaQueries } from "../components/Themes";
 import Typewriter from 'typewriter-effect';
 
@@ -74,31 +75,36 @@ const Line = styled.span`
 
 const NextButton = styled.div`
   background-color: yellow;
+  position: fixed;
   width: 25px;
   height: 25px;
-  top: 5px;
+  top: 75px;
+  left: 120px;
   border-radius: 50%;
   display: flex;
+  z-index: 11;
   justify-content: center;
   align-items: center;
-  font-size:1.5rem;
-  margin-top: -5px;
-  color:black;
-  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: black;
   cursor: pointer;
 
   ${mediaQueries(40)`
-  left: 4rem;
-  margin-top: -0.3rem;
-`};
+    left: 7rem;
+    margin-top: -3.2rem;
+  `};
 
+  &:hover {
+    background-color: orange; /* Change the background color on hover if needed */
+  }
 `;
 
 const SongText = styled.div`
   position: fixed;
   left: 5rem;
   top: 6rem;
-  color: ${(props) => (props.theme === "dark" ? "white" : "black")};
+  font-weight: bold;
+  color: green;
   font-size: 0.8rem;
   z-index: 11;
   white-space: nowrap;
@@ -129,36 +135,46 @@ const SongText = styled.div`
 
   ${mediaQueries(40)`
     left: 4rem;
-    top: 3.4rem;
+    top: 3rem;
+    
   `};
 `;
 
 const songsData = [
-  { id: 1, title: "Currently Playing - 'Sunflower'" },
-  { id: 2, title: "Currently Playing - 'Am I Dreaming'" },
-  { id: 3, title: "Currently Playing - 'Calling'" },
+  { id: 1, title: "Currently Playing - 'Na Ready'" },
+  { id: 2, title: "Currently Playing - 'Sunflower'" },
+  { id: 3, title: "Currently Playing - 'Am I Dreaming'" },
+  { id: 4, title: "Currently Playing - 'Calling'" },
 ];
+
+// ... (imports and styled components)
+
+// ... (imports and styled components)
+
+// ... (imports and styled components)
 
 const SoundBar = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentSong, setCurrentSong] = useState(1);
+  const [currentSong, setCurrentSong] = useState(0); // Start with 0 to handle the initial setup
   const [firstClick, setFirstClick] = useState(true);
-  const [animationPlayed, setAnimationPlayed] = useState(false);
-
   const ref = useRef(new Audio());
-  const songs = [music1, music2, music3];
+  const songs = [music1, music2, music3,music4];
 
-  const handleClick = async () => {
+  const handleSoundBarClick = async () => {
     if (!isPlaying && firstClick) {
-      // If it's the first click, set currentSong to 1
-      setCurrentSong(1);
+      setCurrentSong(1); // Start with the first song
       setFirstClick(false);
     }
 
     if (!isPlaying) {
       try {
-        await ref.current.play();
-        ref.current.addEventListener("ended", handleNext);
+        if (ref.current.currentTime > 0) {
+          // If paused, set currentTime before playing
+          await ref.current.play();
+        } else {
+          ref.current.src = songs[currentSong];
+          await ref.current.play();
+        }
       } catch (error) {
         console.error("Play error:", error);
       }
@@ -168,56 +184,49 @@ const SoundBar = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const handleNext = useCallback(() => {
+  const handleNextButtonClick = () => {
     ref.current.pause();
     ref.current.currentTime = 0;
-    setCurrentSong((prevSong) => (prevSong === songs.length ? 1 : prevSong + 1));
-    setIsPlaying(true);
-  }, [songs]);
+    handleNextSong();
+  };
 
-  
+  const handleNextSong = () => {
+    setCurrentSong((prevSong) => (prevSong === songs.length - 1 ? 0 : prevSong + 1));
+    // Update the audio source and play
+    ref.current.src = songs[currentSong];
+    ref.current.play();
+    setIsPlaying(true);
+  };
 
   useEffect(() => {
-    const playAudio = async () => {
-      try {
-        if (isPlaying) {
-          if (ref.current.currentTime === 0) {
-            await ref.current.play();
-          } else {
-            ref.current.play();
-          }
-        }
-      } catch (error) {
-        console.error("Play error:", error);
-      }
+    const handleEnded = () => {
+      // Pause and reset currentTime before playing the next song
+      ref.current.pause();
+      ref.current.currentTime = 0;
+      handleNextSong();
     };
 
-    ref.current.src = songs[currentSong - 1];
-    ref.current.addEventListener("ended", handleNext);
-    ref.current.addEventListener("canplaythrough", playAudio);
-
-    playAudio();
+    // Add event listener for the 'ended' event
+    ref.current.addEventListener("ended", handleEnded);
 
     return () => {
-      ref.current.removeEventListener("ended", handleNext);
-      ref.current.removeEventListener("canplaythrough", playAudio);
+      // Remove event listener when component unmounts
+      ref.current.removeEventListener("ended", handleEnded);
     };
-  }, [currentSong, songs, handleNext, isPlaying]);
+  }, [currentSong, songs]);
 
   return (
-    
     <>
       <Box>
-        <Line click={isPlaying} onClick={handleClick} />
-        <Line click={isPlaying} onClick={handleClick} />
-        <Line click={isPlaying} onClick={handleClick} />
-        <Line click={isPlaying} onClick={handleClick} />
-        <Line click={isPlaying} onClick={handleClick} />
-
-        <NextButton onClick={handleNext}>➡</NextButton>
+        <Line click={isPlaying} onClick={handleSoundBarClick} />
+        <Line click={isPlaying} onClick={handleSoundBarClick} />
+        <Line click={isPlaying} onClick={handleSoundBarClick} />
+        <Line click={isPlaying} onClick={handleSoundBarClick} />
+        <Line click={isPlaying} onClick={handleSoundBarClick} />
       </Box>
-
-      {currentSong === 1 && !firstClick && (
+      <NextButton onClick={handleNextButtonClick}>➡</NextButton>
+    
+      {currentSong === 0 && !firstClick && (
         <SongText
           textWidth={songsData[0].title.length * 8.2}
           isPlaying={isPlaying}
@@ -226,13 +235,13 @@ const SoundBar = () => {
             options={{
               strings: [songsData[0].title],
               autoStart: true,
-              loop: true,
+              loop: false,
             }}
           />
         </SongText>
       )}
 
-      {currentSong === 2 && (
+      {currentSong === 1 && (
         <SongText
           textWidth={songsData[1].title.length * 8.2}
           isPlaying={isPlaying}
@@ -241,13 +250,13 @@ const SoundBar = () => {
             options={{
               strings: [songsData[1].title],
               autoStart: true,
-              loop: true,
+              loop: false,
             }}
           />
         </SongText>
       )}
 
-      {currentSong === 3 && (
+      {currentSong === 2 && (
         <SongText
           textWidth={songsData[2].title.length * 8.2}
           isPlaying={isPlaying}
@@ -256,11 +265,27 @@ const SoundBar = () => {
             options={{
               strings: [songsData[2].title],
               autoStart: true,
-              loop: true,
+              loop: false,
             }}
           />
         </SongText>
       )}
+
+{currentSong === 3 && (
+        <SongText
+          textWidth={songsData[3].title.length * 8.2}
+          isPlaying={isPlaying}
+        >
+          <Typewriter
+            options={{
+              strings: [songsData[3].title],
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        </SongText>
+      )}
+
     </>
   );
 };

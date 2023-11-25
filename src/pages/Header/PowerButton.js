@@ -40,7 +40,7 @@ const Power = styled.button`
 
   @media only screen and (max-width: 50em) {
     /* Adjust the position for smaller screens */
-    top: 0.7rem;
+    top: 0.8rem;
     left: 92%;
   }
 `;

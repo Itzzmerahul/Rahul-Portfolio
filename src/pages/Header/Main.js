@@ -21,7 +21,7 @@ const LogoComponent = lazy(() => import("./../Header/LogoComponent"));
 
 const MainContainer = styled(motion.div)`
   background: ${(props) => (props.isMobile ? "black" : "white")};
-  width: 100vw;
+  width: 98.9vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -38,15 +38,18 @@ const MainContainer = styled(motion.div)`
   h2 {
     ${mediaQueries(40)`
       font-size:1.2em;
+     
     `};
 
     ${mediaQueries(30)`
       font-size:1em;
+   
     `};
   }
 
   @media only screen and (max-width: 50em) {
     background: ${(props) => (props.initialLoad && props.isMobile ? "white" : "black")};
+    width: 100vw;
   }
 `;
 
@@ -89,6 +92,8 @@ const Center = styled.button`
     left: ${(props) => (props.click ? "90%" : "50%")};
     width: ${(props) => (props.click ? "80px" : "150px")};
     height: ${(props) => (props.click ? "80px" : "150px")};
+    -webkit-tap-highlight-color: transparent;
+  outline: none;
     
   }
   @media only screen and (max-width: 30em) {
