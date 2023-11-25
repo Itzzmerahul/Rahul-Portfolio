@@ -175,7 +175,7 @@ const Text = styled(motion.div)`
   }
 
   ${mediaQueries(40)`
-        font-size: calc(1.3rem + 1.5vw);
+        font-size: calc(1rem + 1.5vw);
         color: black;
 
   `};

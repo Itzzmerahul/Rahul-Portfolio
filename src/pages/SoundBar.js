@@ -98,17 +98,19 @@ const SongText = styled.div`
   position: fixed;
   left: 5rem;
   top: 6rem;
-  color: ${(props) => (props.theme === "dark" ? "white" : "black")}; // Adjust the text color based on the theme
+  color: ${(props) => (props.theme === "dark" ? "white" : "black")};
   font-size: 0.8rem;
   z-index: 11;
   white-space: nowrap;
   overflow: hidden;
+  opacity: ${(props) => (props.isPlaying ? "1" : "0")}; /* Initial opacity is set to 0 */
+  transition: opacity 1s ease-in-out; /* Use a transition to animate opacity */
 
   &:before {
     content: "";
     display: inline-block;
     vertical-align: top;
-    height: 1.3rem; /* Adjust as needed */
+    height: 1.3rem;
     width: ${(props) => `${props.textWidth}px`};
     background: linear-gradient(to right, transparent 50%);
     background-size: 200% 100%;
@@ -141,6 +143,7 @@ const SoundBar = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(1);
   const [firstClick, setFirstClick] = useState(true);
+  const [animationPlayed, setAnimationPlayed] = useState(false);
 
   const ref = useRef(new Audio());
   const songs = [music1, music2, music3];
@@ -171,6 +174,8 @@ const SoundBar = () => {
     setCurrentSong((prevSong) => (prevSong === songs.length ? 1 : prevSong + 1));
     setIsPlaying(true);
   }, [songs]);
+
+  
 
   useEffect(() => {
     const playAudio = async () => {
