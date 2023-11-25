@@ -40,13 +40,13 @@ export default function Portfolio() {
   return (
     <div className='w-full'>
       <div id="" className="">
-        <div className=" flex items-center dark:text-white text-gray-800 justify-center gap-7 flex-col m-3">
+        <div className=" flex items-center dark:text-white text-gray-800 justify-center gap-7 flex-col m-4">
         <animated.div
   style={{
     ...professionalOverviewAnimation,
     
   }}
-  className="flex flex-col items-center justify-between p-4 shadow-xl rounded-lg shadow-gray-300 dark:shadow-gray-600 bg-white dark:bg-black border border-black dark:border-white gap-10 lg:flex-row lg:p-2 text-md text-black"
+  className="flex flex-col items-center justify-between p-2 shadow-xl rounded-lg shadow-gray-300 dark:shadow-gray-600 bg-white dark:bg-black border border-black dark:border-white gap-10 lg:flex-row lg:p-2 text-md text-black"
 >
             <div className="rounded-lg  h-full px-2 " style={{ fontFamily: "'Space Mono', monospace" }}>
               <div className="lg:m-4 m-1  text-xl lg:text-2xl  dark:text-white text-gray-800 Portfolio1-font">My Overview</div>

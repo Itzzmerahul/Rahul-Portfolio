@@ -53,16 +53,21 @@ const skillsData = [
   },
   // Repeat for the other 6 skills
 ];
+// ... (your existing code)
+
 export default function Skill() {
   return (
-    <div>  <div className="bg-white dark:bg-black m-3 rounded-">
-        
-    <div className="text-4xl font-bold dark:text-white text-white flex items-center justify-left p-2  ">Skills</div>
-    <div className=" md:p-2 lg:p-5 md:m-1 lg:m-5 my-2   flex items-center justify-center flex-wrap  gap-2 lg:gap-4">
-      {skillsData.map((skill, index) => (
-        <SkillCard key={index} skill={skill} index={index} />
-      ))}
+    <div>
+      <div className="bg-white dark:bg-black m-3 rounded-">
+        <div className="text-2xl  dark:text-white text-black font-sans flex items-center justify-left p-2" style={{ fontFamily: "'Quicksand', sans-serif"}}>
+          Skills
+        </div>
+        <div className="md:p-2 lg:p-5 md:m-1 lg:m-5 my-2 flex items-center justify-center flex-wrap gap-2 lg:gap-4">
+          {skillsData.map((skill, index) => (
+            <SkillCard key={index} skill={skill} index={index} />
+          ))}
+        </div>
+      </div>
     </div>
-  </div></div>
-  )
+  );
 }

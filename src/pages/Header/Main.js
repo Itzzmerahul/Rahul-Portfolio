@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import { lazy, Suspense, useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ThemeProvider from "styled-components";
 
 //Components
 import { YinYang } from "./AllSvgs";
@@ -148,7 +149,7 @@ const DarkDiv = styled.div`
   bottom: 0;
   right: 50%;
   width: ${(props) => (props.visible ? "50%" : "0%")};
-  background-color: yellow;
+  background-color: ${(props) => (props.theme === "dark" ? "blue" : "yellow")}; // Updated color here
   height: ${(props) => (props.visible ? "100%" : "0%")};
   transition: height 0.5s ease, width 1s ease 0.5s;
   z-index: 1;
@@ -379,7 +380,7 @@ const Main = () => {
 
         {click ? <Intro click={click} /> : null}
       </MainContainer>
-   
+  
   );
 };
 

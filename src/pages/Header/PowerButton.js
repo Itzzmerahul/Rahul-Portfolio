@@ -8,17 +8,17 @@ import { PowerBtn } from './AllSvgs'
 
 const Power = styled.button`
  
-  position:relative;
-  top: 0.1rem;
-  left: 97%;
+  position:fixed;
+  top: 3.7rem;
+  left: 94%;
   transform: translate(-50%, 0);
 
   background-color: #FCF6F4;
   padding: 0.3rem;
   border-radius: 50%;
   border: 1px solid #000;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
 
   display: flex;
   justify-content: center;
@@ -40,19 +40,25 @@ const Power = styled.button`
 
   @media only screen and (max-width: 50em) {
     /* Adjust the position for smaller screens */
-    top: -2.9rem;
-    left: 100%;
+    top: 0.7rem;
+    left: 92%;
   }
 `;
 
 const PowerButton = () => {
-    return (
-        <Power>
-        <NavLink to="/">
-        <PowerBtn width={30} height={30} fill='currentColor' />
-        </NavLink>
-        </Power>
-    )
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+
+return (
+  <Power onClick={scrollToTop}>
+    <PowerBtn width={30} height={30} fill='currentColor' />
+  </Power>
+);
 }
 
 export default PowerButton
