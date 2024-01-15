@@ -113,6 +113,8 @@ const SubBox = styled.div`
       .pic {
     
     width: 70%;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
     
   }
 

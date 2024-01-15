@@ -6,7 +6,7 @@ import styled, { keyframes } from "styled-components";
 import music1 from "../pages/assets/audio/21.mp3";
 import music2 from "../pages/assets/audio/20.mp3";
 import music3 from "../pages/assets/audio/22.mp3";
-import music4 from "../pages/assets/audio/2.mp3";
+import music4 from "../pages/assets/audio/naruto.mp3";
 import { mediaQueries } from "../components/Themes";
 import Typewriter from 'typewriter-effect';
 
@@ -141,7 +141,7 @@ const SongText = styled.div`
 `;
 
 const songsData = [
-  { id: 1, title: "Currently Playing - 'Na Ready'" },
+  { id: 1, title: "Currently Playing - 'Naruto'" },
   { id: 2, title: "Currently Playing - 'Sunflower'" },
   { id: 3, title: "Currently Playing - 'Am I Dreaming'" },
   { id: 4, title: "Currently Playing - 'Calling'" },
