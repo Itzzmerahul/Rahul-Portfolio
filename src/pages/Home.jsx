@@ -22,7 +22,11 @@ export default function Home() {
       setShowNavbar(false);
     }
   };
-  
+  // eslint-disable-next-line
+  const pageStyle = {
+    backgroundColor: 'black', // Set the background color to black
+  };
+
 
   return (
     <div className="w-full h-full font-roboto bg-white flex items-center justify-between flex-col">
