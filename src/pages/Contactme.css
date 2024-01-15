@@ -1,18 +1,11 @@
+/* Contactme.css */
 
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 10;
-      transform: translateY(0);
+/* Your existing styles */
+
+@media (max-width: 640px) {
+    /* Adjust the border width for screens with a width of 640 pixels or less */
+    #contactMe {
+      border-width: 0px;
     }
-  }
-
-  .contact-form {
-    transform: translateY(-100%);
-    transition: transform 0.5s;
-  }
-  
-  .contact-form.visible {
-    transform: translateY(0);
   }
   

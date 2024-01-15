@@ -2,4 +2,12 @@
 .transition-transform {
   transition: transform 0.1s ease-in-out;
 }
-
+/* body{
+  font-family: 'Quicksand', sans-serif;
+font-family: 'Space Mono', monospace;
+} */
+/* styles.css */
+body, html {
+  margin: 0;
+  padding: 0;
+}

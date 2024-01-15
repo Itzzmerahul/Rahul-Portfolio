@@ -1,9 +1,6 @@
 /* Add this CSS to your project, or link to an external CSS file */
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 10;
-      transform: translateY(0);
-    }
+.professional-overview {
+    will-change: transform, opacity;
   }
+  
   
